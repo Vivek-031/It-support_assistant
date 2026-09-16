@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT Support Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>IT Support Assistant</h1>
+    <span id="status" class="pill">Checking…</span>
+  </header>
+
+  <main class="layout">
+    <div class="main-col">
+      <section class="panel">
+        <form id="ask-form" novalidate>
+          <label for="question">Describe your technical problem</label>
+          <textarea id="question" name="question" rows="5" maxlength="1000"
+            placeholder="e.g. My laptop is connected to Wi-Fi but websites won't load"></textarea>
+          <div class="form-row">
+            <span id="char-count" class="muted">0 / 1000</span>
+            <button id="submit-btn" type="submit">Get help</button>
+          </div>
+          <p id="form-error" class="field-error" role="alert" hidden></p>
+        </form>
+
+        <div class="examples">
+          <span class="muted">Try:</span>
+          <button type="button" class="chip">VPN keeps disconnecting when I work from home</button>
+          <button type="button" class="chip">Documents are stuck in the printer queue</button>
+          <button type="button" class="chip">My laptop has become really slow and freezes</button>
+          <button type="button" class="chip">I clicked a link in a suspicious email</button>
+        </div>
+      </section>
+
+      <section id="result" class="panel" aria-live="polite" hidden>
+        <div id="loading" class="loading" hidden>
+          <span class="spinner" aria-hidden="true"></span>
+          Searching the knowledge base and generating an answer…
+        </div>
+
+        <div id="error-box" class="error-box" role="alert" hidden></div>
+
+        <article id="answer" hidden>
+          <div class="section-head">
+            <h2>Suggested fix</h2>
+            <span id="ticket-meta" class="muted"></span>
+          </div>
+          <p id="ticket-question" class="question"></p>
+          <div id="answer-text" class="answer-text"></div>
+          <h3>Knowledge base articles used</h3>
+          <ul id="sources" class="sources"></ul>
+        </article>
+      </section>
+    </div>
+
+    <aside class="panel">
+      <div class="section-head">
+        <h2>Recent tickets</h2>
+        <button id="refresh-btn" type="button" class="link-btn">Refresh</button>
+      </div>
+      <ul id="ticket-list" class="ticket-list"></ul>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

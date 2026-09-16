@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Forgot password or account locked out",
+    "category": "Accounts",
+    "keywords": "password reset, forgot password, locked out, account locked, login failed, sign in, credentials, expired password",
+    "problem": "User cannot sign in because they forgot their password, the password expired, or the account was locked after too many failed attempts.",
+    "solution": "1. Wait 15 minutes; lockouts from failed attempts clear automatically.\n2. Use the self-service password reset portal (Forgot password link on the sign-in page) and verify with MFA.\n3. Check Caps Lock and keyboard language before retrying.\n4. After resetting, update the saved password on your phone email app and Wi-Fi profiles, or they will lock the account again.\n5. If self-service fails, contact the help desk with your employee ID. IT will never ask for your password."
+  },
+  {
+    "title": "Wi-Fi connected but no internet access",
+    "category": "Network",
+    "keywords": "wifi, wi-fi, wireless, no internet, connected no internet, websites not loading, dns, ip address, network",
+    "problem": "The device shows it is connected to Wi-Fi, but websites and apps cannot reach the internet.",
+    "solution": "1. Toggle Wi-Fi off and on, or forget the network and reconnect.\n2. Check whether other devices on the same network have internet; if not, restart the router or report a site outage.\n3. Open a command prompt and run: ipconfig /release, ipconfig /renew, ipconfig /flushdns (macOS: renew DHCP lease in Network settings).\n4. Disable any manual proxy settings you did not configure.\n5. Restart the computer and update the wireless network driver."
+  },
+  {
+    "title": "VPN will not connect",
+    "category": "Network",
+    "keywords": "vpn, remote access, anyconnect, globalprotect, forticlient, tunnel, work from home, vpn disconnects, vpn timeout",
+    "problem": "The corporate VPN client fails to connect, times out, or keeps disconnecting when working remotely.",
+    "solution": "1. Confirm you have a working internet connection by opening a public website.\n2. Quit the VPN client completely and reopen it; make sure you selected the correct gateway/region.\n3. Re-enter your credentials and approve the MFA prompt promptly (prompts expire after about 60 seconds).\n4. Check the system date and time are correct; certificate checks fail when the clock is wrong.\n5. Try a different network (e.g. phone hotspot); some hotel and public networks block VPN traffic.\n6. Reinstall the VPN client from the company software portal if the error persists."
+  },
+  {
+    "title": "Printer not printing or print queue stuck",
+    "category": "Hardware",
+    "keywords": "printer, print, printing, print queue, print spooler, paper jam, offline printer, documents stuck",
+    "problem": "Documents are stuck in the print queue, the printer shows as offline, or nothing comes out of the printer.",
+    "solution": "1. Check the printer display for paper jams, empty trays, or low toner.\n2. Power-cycle the printer and wait until it shows Ready.\n3. Open the print queue, cancel all stuck documents, and try again.\n4. Windows: restart the Print Spooler service (services.msc > Print Spooler > Restart).\n5. Make sure the correct printer is selected and not set to 'Use Printer Offline'.\n6. Remove and re-add the printer from the company printer list."
+  },
+  {
+    "title": "Computer running slow",
+    "category": "Performance",
+    "keywords": "slow computer, slow laptop, lagging, freezing, high cpu, high memory, performance, sluggish, hangs",
+    "problem": "The computer is slow to start, apps lag or freeze, and the fans may run constantly.",
+    "solution": "1. Restart the computer; many slowdowns come from long uptime and pending updates.\n2. Open Task Manager (Ctrl+Shift+Esc) or Activity Monitor and close apps using high CPU or memory.\n3. Close unused browser tabs and disable unnecessary startup apps.\n4. Make sure at least 15% of disk space is free.\n5. Install pending operating system and driver updates.\n6. Run a full antivirus scan. If still slow, IT can check disk health and memory."
+  },
+  {
+    "title": "Outlook not receiving or sending email",
+    "category": "Email",
+    "keywords": "outlook, email, mail, inbox, not receiving emails, not sending, outbox stuck, sync, mailbox full, disconnected",
+    "problem": "Outlook is not syncing new emails, messages stay in the Outbox, or Outlook shows Disconnected.",
+    "solution": "1. Check the Outlook status bar; if it says Working Offline, turn off Send/Receive > Work Offline.\n2. Check whether email works in Outlook on the web; if it does, the issue is with the desktop app.\n3. Check mailbox size; a full mailbox blocks sending. Empty Deleted Items and archive old mail.\n4. Remove large attachments (over 20 MB) stuck in the Outbox.\n5. Restart Outlook, then repair the Office installation or recreate the Outlook profile."
+  },
+  {
+    "title": "Cannot access shared network drive",
+    "category": "Network",
+    "keywords": "shared drive, network drive, mapped drive, file share, smb, access denied, folder permission, file server",
+    "problem": "A mapped network drive is missing, shows a red X, or returns Access Denied.",
+    "solution": "1. Make sure you are on the office network, or connected to the company VPN if remote.\n2. Open File Explorer and try the full path (e.g. \\\\fileserver\\share) instead of the drive letter.\n3. Disconnect and re-map the drive, ticking 'Reconnect at sign-in'.\n4. Sign out and back in to refresh your group memberships after a permission change.\n5. If you get Access Denied, request access from the folder owner through the access request portal."
+  },
+  {
+    "title": "Blue screen error (BSOD) or unexpected restarts",
+    "category": "Operating System",
+    "keywords": "blue screen, bsod, crash, stop code, unexpected restart, reboot loop, system crash, kernel panic",
+    "problem": "The computer shows a blue screen with a stop code, crashes, or restarts unexpectedly.",
+    "solution": "1. Note the stop code shown on the blue screen (e.g. MEMORY_MANAGEMENT).\n2. Disconnect non-essential USB devices and docks, then restart.\n3. Install all Windows and driver updates, especially graphics, storage, and chipset drivers.\n4. If crashes began after a recent update or new software, uninstall it or use System Restore.\n5. Run Windows Memory Diagnostic and check the disk with chkdsk.\n6. Repeated crashes can mean failing hardware: back up your files and contact IT."
+  },
+  {
+    "title": "Microphone or camera not working in Teams or Zoom",
+    "category": "Collaboration",
+    "keywords": "microphone, mic, camera, webcam, audio, teams, zoom, meeting, cannot hear, no video, headset",
+    "problem": "Others cannot hear or see the user during meetings, or the camera shows a black screen.",
+    "solution": "1. In the meeting app's device settings, select the correct microphone, speaker, and camera.\n2. Check the hardware mute switch or camera privacy shutter on the laptop or headset.\n3. Check OS privacy settings: allow apps to access the microphone and camera.\n4. Close other apps that may be using the camera.\n5. Unplug and reconnect the headset or webcam, then restart the meeting app.\n6. Update the meeting app and audio/camera drivers."
+  },
+  {
+    "title": "Software installation requires admin rights",
+    "category": "Software",
+    "keywords": "install software, administrator, admin rights, admin password, permission denied, install app, software request, uac prompt",
+    "problem": "User cannot install an application because the installer asks for an administrator password.",
+    "solution": "1. Check the company software portal (Company Portal / Self Service); approved apps install without admin rights.\n2. If the app is not listed, submit a software request with the app name, version, and business reason.\n3. Do not download installers from unofficial websites.\n4. IT will review licensing and security, then install the app remotely or add it to the portal."
+  },
+  {
+    "title": "Laptop not charging or will not power on",
+    "category": "Hardware",
+    "keywords": "laptop not charging, battery, charger, power, will not turn on, dead laptop, no power, adapter, usb-c charging",
+    "problem": "The laptop battery does not charge, or the laptop will not turn on at all.",
+    "solution": "1. Try a different wall outlet and check that the charger light is on.\n2. Inspect the cable and connector for damage; for USB-C, try another port on the laptop.\n3. Connect the charger and wait 15 minutes before trying to power on a fully drained battery.\n4. Hold the power button for 15-30 seconds to reset, then press it again normally.\n5. Remove docks and external devices and try again.\n6. If it still does not charge or power on, contact IT for a replacement charger or repair."
+  },
+  {
+    "title": "Suspected phishing email",
+    "category": "Security",
+    "keywords": "phishing, suspicious email, scam, spam, malicious link, clicked link, fake email, security, attachment",
+    "problem": "User received a suspicious email asking them to click a link, open an attachment, or provide credentials.",
+    "solution": "1. Do not click links, open attachments, or reply.\n2. Use the Report Phishing button in Outlook, or forward the email as an attachment to the security team.\n3. If you already clicked a link or entered your password, change your password immediately and contact IT security.\n4. If you opened an attachment, disconnect from the network and call the help desk right away.\n5. Delete the email after reporting it."
+  },
+  {
+    "title": "Disk space full or low storage warning",
+    "category": "Performance",
+    "keywords": "disk full, low disk space, storage full, hard drive full, c drive full, free up space, storage warning",
+    "problem": "The computer warns that disk space is low, and saving files or installing updates fails.",
+    "solution": "1. Empty the Recycle Bin/Trash and the Downloads folder.\n2. Run Disk Cleanup (Windows) or Storage Management (macOS), including temporary and update files.\n3. Move large files to OneDrive or the company cloud storage and set them to online-only.\n4. Uninstall applications you no longer use.\n5. Use a tool like WinDirStat, or Storage settings, to find large folders.\n6. Contact IT if the disk is still full; the device may need a larger drive."
+  },
+  {
+    "title": "MFA codes not working or setting up a new phone",
+    "category": "Accounts",
+    "keywords": "mfa, 2fa, two factor, authenticator, verification code, new phone, otp, multi-factor, approval prompt",
+    "problem": "Authenticator codes are rejected, MFA prompts do not arrive, or the user got a new phone and lost their authenticator app.",
+    "solution": "1. Make sure the phone's date and time are set automatically; wrong time makes codes invalid.\n2. Open the authenticator app manually to see pending prompts if notifications do not arrive.\n3. If you still have the old phone, add the new device from the security info page before wiping the old one.\n4. Use a backup method (SMS or backup codes) if configured.\n5. If you have no working method, contact the help desk to verify your identity and reset MFA. Never share codes with anyone."
+  },
+  {
+    "title": "External monitor not detected",
+    "category": "Hardware",
+    "keywords": "monitor, external display, second screen, hdmi, displayport, docking station, no signal, screen not detected, projector",
+    "problem": "An external monitor or projector shows No Signal or is not detected by the laptop.",
+    "solution": "1. Check the monitor is powered on and set to the correct input source (HDMI/DisplayPort).\n2. Reseat both ends of the cable, or try a different cable and port.\n3. Press Win+P (Windows) and choose Extend or Duplicate; on macOS open Displays settings.\n4. Windows: Settings > Display > Detect.\n5. If using a docking station, unplug it for 10 seconds, reconnect it, and update the dock firmware and graphics drivers."
+  }
+]
